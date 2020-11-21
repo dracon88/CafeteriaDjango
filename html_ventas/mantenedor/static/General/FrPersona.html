@@ -1,0 +1,352 @@
+<div class="row">
+  <div class="span10">
+	<form class="form-horizontal well" id="forms-registro">
+		  <div class="container">
+			  <!--ul class="nav nav-tabs"-->
+			  <ul class="nav nav-pills ">
+				<li class="active"><a href="http://docente.portalacademico.cl/VPH/SisDocente/Start/Index.html#tab_Curso" data-toggle="pill"><span class="fa fa-home"></span> Curso</a></li>
+				<li><a href="http://docente.portalacademico.cl/VPH/SisDocente/Start/Index.html#tab_Libro" data-toggle="pill"><span class="fa fa-home"></span> Libro de Clases</a></li>
+			  </ul>
+			  <div class="tab-content">
+				  <div class="tab-pane active" id="tab_Curso">
+					   <fieldset>
+						  <div class="dropdown span1">
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							  Acciones
+							  <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.showCursosAlum(247317 );">Alumnos</a></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.showCursosNotas(247317 );">Calificaciones</a></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.showAsistencia( 247317 );">Asistencia</a></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.showClases(&#39;247317&#39;);">Clases</a></li>
+							   <li role="presentation" class="divider"></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.actMails(&#39;247317&#39;);">Actualizar Mail's</a></li>
+							</ul>
+						  </div>
+
+							  <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Empresa-6-j-243-</label>
+								  <div class="col-sm-3">
+								  <select notnull="" msgnull="Identificador de la Empresa" id="cbNroEmp" name="cbNroEmp" class="form-combo" style="width: 350px;">
+								  <option selected="" value="101">Duoc UC</option>
+
+
+
+<option value="1001">Harrys Informática</option>
+
+
+
+<option value="1003">Kibernum</option>
+
+
+
+
+								  </select>
+								  </div>
+							 </div>
+
+							 <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Sede5127</label>
+								  <div class="col-sm-3">
+								  <select notnull="" msgnull="Seleccione Sede" id="cbSede" name="cbSede" class="form-combo" style="width: 350px;">
+									<option value="21">ALAMEDA</option>
+
+
+
+<option value="6">ANTONIO VARAS</option>
+
+
+
+<option value="5140">ARAUCO</option>
+
+
+
+<option value="31">Colegio Monte Del Olimpo, Puente Alto		</option>
+
+
+
+<option value="264">CONCEPCION</option>
+
+
+
+<option value="2">Harrys</option>
+
+
+
+<option value="3">Independiente</option>
+
+
+
+<option value="1">Kibernum</option>
+
+
+
+<option value="5137">La Cisterna</option>
+
+
+
+<option value="5138">La Granja</option>
+
+
+
+<option value="5136">Local de San Bernardo</option>
+
+
+
+<option value="11">MAIPU</option>
+
+
+
+<option value="23">MELIPILLA</option>
+
+
+
+<option value="15">PADRE ALONSO DE OVALLE</option>
+
+
+
+<option value="5135">PLAZA NORTE</option>
+
+
+
+<option value="19">PLAZA OESTE</option>
+
+
+
+<option value="25">PLAZA VESPUCIO</option>
+
+
+
+<option value="13">PUENTE ALTO</option>
+
+
+
+<option value="232">RENCA</option>
+
+
+
+<option selected="" value="5127">SAN BERNARDO</option>
+
+
+
+<option value="17">SAN CARLOS DE APOQUINDO</option>
+
+
+
+<option value="1555">SAN JOAQUIN</option>
+
+
+
+<option value="0">Sin Sede</option>
+
+
+
+<option value="29">VALPARAISO</option>
+
+
+
+<option value="27">VINA DEL MAR</option>
+
+
+
+
+								  </select>
+								  </div>
+							 </div>
+
+							  <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Ramo</label>
+								  <div class="col-sm-3">
+									  <input notnull="" msgnull="Sigla del Ramo" readonly="" type="text" class="input-medium required" id="txCodRamo" name="txCodRamo" maxlength="20" value="ASY4101" style="width: 100px;">
+									  <button type="button" class="btn  btn-help" onclick="javascript:wpar.mpRamos.helpRamo();"><i class="fa fa-search"></i></button>
+									  <input readonly="" type="text" class="input-medium required" id="txKeyRamo" name="txKeyRamo" maxlength="20" value="4876" style="width: 100px;visibility: hidden;">
+								  </div>
+								  <label class="col-sm-1 control-label" for="input01">Sección</label>
+								  <div class="col-sm-3">
+									  <input notnull="" msgnull="Nro. Sección" type="text" class="input-medium required" id="txNroSec" name="txNroSec" maxlength="4" value="2" style="width: 50px;">
+								  </div>
+							  </div>
+							  <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Descripción</label>
+								  <div class="col-sm-3">
+									  <input readonly="" type="text" class="input-large required " id="txDescRamo" name="txDescRamo" maxlength="100" value="" style="width: 450px;">
+								  </div>
+							  </div>
+							  <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Valor</label>
+								  <div class="col-sm-3">
+									  <input notnull="" msgnull="Valor del Curso" type="text" class="input-large required " id="txValor" name="txValor" maxlength="100" value="0">
+								  </div>
+							  </div>
+							  <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Max. Alumnos</label>
+								  <div class="col-sm-3">
+									  <input notnull="" msgnull="Máxima Cantidad de Alumnos" type="text" class="input-large required " id="txAlum" name="txAlum" maxlength="100" value="30">
+								  </div>
+							  </div>
+							  <!--div class='form-group'>
+								  <label class='col-sm-3 control-label' for='input01'>F. Activaci&oacute;n</label>
+								  <div class='col-sm-1'>
+									  <input type='text' readonly class='input-small required ' id='txFAb' name='txFAb' maxlength='100' value='' style='width: 100px;'>
+								  </div>
+								  <label class='col-sm-3 control-label' for='input01'>F. Cierre</label>
+								  <div class='col-sm-1'>
+									  <input type='text' readonly class='input-large required ' id='txFCe' name='txFCe' maxlength='100' value='' style='width: 100px;'>
+								  </div>
+							  </div>
+							  <div class='form-group'>
+								  <label class='col-sm-3 control-label' for='input01'>Estado</label>
+								  <div class='col-sm-3'>
+								  <select readonly disabled id='cbEstado'  name='cbEstado' class='form-combo' style='width: 350px;'>
+								  </select>
+								  </div>
+							  </div-->
+							  <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Tipo de Avance</label>
+								  <div class="col-sm-3">
+								  <select id="cbTipCur" name="cbTipCur" class="form-combo" style="width: 350px;">
+								   <option value="A">Libre secuencial</option>
+
+
+
+<option value="L">Libre como desee el Usuario</option>
+
+
+
+<option selected="" value="P">Definido por el Profesor</option>
+
+
+
+<option value="S">Personalizado Por Alumno</option>
+
+
+
+
+								  </select>
+								  </div>
+							  </div>
+							  <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Oferta Web </label>
+								  <div class="col-sm-3">
+										  <input type="radio" value="1" name="chOWeb" id="chOWeb" dd=""> Si
+										  <input type="radio" value="0" name="chOWeb" id="chOWeb" checked=""> No
+								  </div>
+							  </div>
+							  <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Venta Web </label>
+								  <div class="col-sm-3">
+										  <input type="radio" value="1" name="chVWeb" id="chVWeb" dd=""> Si
+										  <input type="radio" value="0" name="chVWeb" id="chVWeb" checked=""> No
+								  </div>
+							  </div>
+							  <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Curso </label>
+								  <div class="col-sm-3">
+									  <input type="text" readonly="" class="input-small required " id="txCodCur" name="txCodCur" maxlength="100" value="DUOCABD" style="width: 150px;">
+									  <button type="button" class="btn  btn-help" onclick="javascript:wpar.mpSecDoc.helpCurso();"><i class="fa fa-search"></i></button>
+									  <input type="text" readonly="" class="input-small required " id="txKeyCur" name="txKeyCur" maxlength="100" value="-4" style="width: 100px;visibility: hidden;">
+									  <input type="text" readonly="" class="input-large required " id="txDescCur" name="txDescCur" maxlength="100" value="Administración Base de Datos Oracle" style="width: 400px;">
+								  </div>
+							  </div>
+							  <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Carrera </label>
+								  <div class="col-sm-3">
+									  <input notnull="" msgnull="Carrera " type="text" readonly="" class="input-small required " id="txCodCar" name="txCodCar" maxlength="100" value="SINCAR" style="width: 100px;">
+									  <button type="button" class="btn  btn-help" onclick="javascript:wpar.mpCarreras.helpCarreras();"><i class="fa fa-search"></i></button>
+									  <input type="text" readonly="" class="input-small required " id="txKeyCar" name="txKeyCar" maxlength="100" value="1" style="width: 100px;visibility: hidden1;">
+									  <input type="text" readonly="" class="input-large required " id="txDescCar" name="txDescCar" maxlength="100" value="Sin Carrera" style="width: 400px;">
+								  </div>
+							  </div>
+							  <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Profesor </label>
+								  <div class="col-sm-3">
+									  <input notnull="" msgnull="Profesor " type="text" readonly="" class="input-small required " id="txIdPro" name="txIdPro" maxlength="100" value="10446101-8" style="width: 100px;">
+									  <button type="button" class="btn  btn-help" onclick="javascript:wpar.mpProfe.helpProfesor();"><i class="fa fa-search"></i></button>
+									  <input type="text" readonly="" class="input-small required " id="txKeyPro" name="txKeyPro" maxlength="100" value="3953" style="width: 100px;visibility: hidden1;">
+									  <input type="text" readonly="" class="input-large required " id="txDescPro" name="txDescPro" maxlength="100" value="OJEDA ESCALANTE CARLOS RAÚL" style="width: 400px;">
+								  </div>
+							  </div>
+						  </fieldset>
+					  </div>
+
+<!-- ***********************************************************************************-->
+
+
+					  <div class="tab-pane" id="tab_Libro">
+						  <fieldset>
+<table border="0"><tbody><tr><td>
+						  <div class="dropdown span1">
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							  Actualizar Secciones Duoc UC
+							  <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							   <!--li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.actListaDuoc('247317');"> Secci&oacute;n</a></li-->
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.actListaDuoc(&#39;0&#39;);"> Todas Mis Secciones</a></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.actNotasDuoc(&#39;0&#39;);"> Notas Mis Secciones</a></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.actNotasDuoc(&#39;247317&#39;);"> Notas Sección</a></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.actFotos(&#39;247317&#39;);">Actualizar Fotos</a></li>
+							</ul>
+						  </div>
+</td><td>
+						  <div class="dropdown span1">
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							  Libro de Clases
+							  <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.genLibClases (&#39;247317&#39;);">Generar Libro</a></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.genLibClases (&#39;0&#39;);">Todos Mis  Libro</a></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.genLibClases (&#39;0&#39;,&#39;mio&#39;);">Enviar Libro por Mail</a></li>
+							   <li role="presentation" class="divider"></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.genAsisClases(&#39;247317&#39;);">Gen. Libro Asistencia</a></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.genAsisClases(&#39;0&#39;);">Libro Asistencia Completo</a></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.genAsisClases(&#39;0&#39;,&#39;mio&#39;);">Enviar Asistencia por Mail</a></li>
+							   <li role="presentation" class="divider"></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.actListaDuoc(&#39;247317&#39;);"> Actualizar Evento</a></li>
+							</ul>
+						  </div>
+</td><td>
+
+						  <div class="dropdown span1">
+							<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							  Generar Clases
+							  <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.genClases(&#39;247317&#39;);"> Sección</a></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.genClases(&#39;0&#39;);"> Mis Secciones</a></li>
+							   <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:wpar.mpCurDoc.genClases(&#39;-1&#39;);"> Secciones Activas</a></li>
+
+							</ul>
+						  </div>
+</td></tr></tbody></table>
+							  <div class="form-group">
+								  <label class="col-sm-3 control-label" for="input01">Mail Libro</label>
+								  <div class="col-sm-3">
+									  <input type="text" class="input-large required " id="txMailLibro" name="txMailLibro" maxlength="400" value="" style="width: 500px;">
+								  </div>
+							  </div>
+
+
+
+
+						  </fieldset>
+					  </div>
+
+			  </div><!-- tab content -->
+		  </div><!-- end of container -->
+
+<!-- **************************************************************************-->
+			<div class="form-actions">
+			  <table width="100%" border="0"><tbody><tr><td width="100%" align="right">
+  <button type="button" align="right" class="btn  btn-success" onclick="javascript:wpar.mpSecDoc.grabarCurso();"><i class="fa fa-floppy-save"></i> Actualizar</button>
+  <button align="right" class="btn btn-primary" name="commit" value="Cerrar" type="reset" onclick="javascript:wpar.mpSecDoc.desactivarSeccion()"><i class="fa fa-ok"> DesActivar</i></button>
+  <button disabled="" align="right" class="btn btn-primary" name="commit" value="Cerrar" type="reset" onclick="javascript:fuAbrirCurso()"><i class="fa fa-ok"> Activar</i></button>
+  <button disabled="" align="right" class="btn btn-primary" name="commit" value="Cerrar" type="reset" onclick="javascript:fuCerrarCurso()"><i class="fa fa-remove"> Cerrar Curso 5127</i></button>
+			  </td></tr></tbody></table>
+			</div>
+	</form>
+  </div>
+</div>

@@ -1,0 +1,193 @@
+{% extends 'mantenedor/index.html' %}
+    {% load static %}
+    {% block content %}
+
+        <section class="content">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box">
+              <div class="box-header">
+
+
+  
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                  <title>Bootstrap Example</title>
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+                  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                  <style>
+                    /* Remove the navbar's default margin-bottom and rounded borders */ 
+                    .navbar {
+                      margin-bottom: 0;
+                      border-radius: 0;
+                    }
+                    
+                    /* Add a gray background color and some padding to the footer */
+                    footer {
+                      background-color: #f2f2f2;
+                      padding: 25px;
+                    }
+                    
+                  .carousel-inner img {
+                      width: 100%; /* Set width to 100% */
+                      margin: auto;
+                      min-height:200px;
+                  }
+                
+                  /* Hide the carousel text when the screen is less than 600 pixels wide */
+                  @media (max-width: 600px) {
+                    .carousel-caption {
+                      display: none; 
+                    }
+                  }
+                  </style>
+                </head>
+                <body>
+                
+              
+                
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                    </ol>
+                
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <img src="{% static 'imagenes/fondo1.jpg'%}" alt="Image">
+                        <div class="carousel-caption">
+                        <!--  <h3>Sell $</h3>-->
+                        <!--  <p>Money Money.</p>-->
+                        </div>      
+                      </div>
+                
+                      <div class="item">
+                        <img src="{% static 'imagenes/fondo3.jpg'%}" alt="Image">
+                        <div class="carousel-caption">
+                       <!--   <h3>More Sell $</h3>-->
+                        <!--  <p>Lorem ipsum...</p>-->
+                        </div>      
+                      </div>
+                    </div>
+                
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                  
+                <div class="container-fluid">    
+                  <h3>Un poco de Historia</h3><br>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <img src="{% static 'imagenes/card1.png'%}" class="img-responsive" style="width:100%" alt="Image">
+                      <p>--Capuchino-- Es una bebida nacida en Italia, preparada con café expreso y leche montada con vapor para otorgarle cremosidad. 
+                        Un capuchino se compone de 125 ml de leche y 25 ml de café expreso, en ocasiones se agrega cacao en polvo
+                         o canela según el gusto del consumidor.</p>
+                    </div>
+                    <div class="col-sm-3"> 
+                      <img src="{% static 'imagenes/card2.jpg'%}" class="img-responsive" style="width:100%" alt="Image">
+                      <p>--Café Moca-- es una variante del café con leche. Como este, suele llevar un tercio de expreso 
+                        y dos tercios de leche vaporizada, pero se añade una parte de chocolate, normalmente en forma 
+                        de jarabe de chocolate, si bien algunas máquinas usan chocolate en polvo instantáneo. Los mocas
+                         contienen chocolate negro o con leche.</p>    
+                    </div>
+                    <div class="col-sm-3">
+                      <img src="{% static 'imagenes/card3.jpg'%}" class="img-responsive" style="width:100%" alt="Image">
+                      <p>--Café Expreso-- (también llamado café exprés, express, espresso o solo) es una forma de 
+                        preparación de café originada en Italia. Debe su término a la obtención de esta bebida
+                         a través de una cafetera expreso. Se caracteriza por su rápida preparación y por un 
+                         sabor y textura más concentrados. </p>
+                    </div>
+                    <div class="col-sm-3">
+                      <img src="{% static 'imagenes/card4.jpg'%}" class="img-responsive" style="width:100%" alt="Image">
+                      <p>--Café con Canela-- es una forma típica de preparar el café en México, que consiste en 
+                        aromatizarlo con canela y piloncillo (panela); a veces también clavo de olor, chocolate 
+                        amargo, anís estrellado, pimienta de Tabasco y piel de naranja o limón. Tradicionalmente 
+                        se cuece en olla de barro, de ahí su nombre, y se sirve en tazas de forma esférica que 
+                        también son de barro</p>
+                    </div>
+                  </div>
+                </div><br>
+
+                
+                
+                <!-- Footer -->
+<footer class="page-footer font-small mdb-color darken-3 pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container-fluid">
+
+    <!--Grid row-->
+    <div class="row d-flex justify-content-center">
+
+      <!--Grid column-->
+      <div class="col-md-8">
+
+        <!-- Video -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/B1yJuGQOUaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        </div>
+        <div class="col-xs-4 well">
+          <div class="thumbnail">
+            <h3>Arte Latte</h3>
+          
+            
+            <p>El arte latte tiene varios nombres como: arte en café, 
+              arte barista o diseños en café, sin embargo el nombre más común es arte latte.
+              Pero ¿qué es? Se trata de dibujar son la leche sobre el café espresso, con 2 técnicas 
+              fundamentales: caída libre o etching (grabado).
+              Todo empieza cuando vaporizas o cremas la leche y la viertes sobre el espresso a manera
+               de crear diseños sobre el café. Se puede hacer con chocolate, colorantes, o sólo con la leche.
+
+            </p>
+            <button class="btn btn-primary">
+            <a href="https://www.arte-latte.com/que-es-arte-latte/" target="_blank" class="btn btn-primary">Mas Informacion</a></button>
+
+          </div>      
+        </div>
+      </div>
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+ 
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+                
+                
+
+
+
+
+</div>
+</div>
+</div>
+</section> 
+<script>
+  $(function () {
+    $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+   });  
+</script>
+
+{% endblock %}

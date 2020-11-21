@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cafeteria</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+           <li class="nav-item dropdown">
+            <li><a href="/postresInicio">Catalogo de Productos</a></li>
+        <!--<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/postresInicio">Postres</a>
+          <a class="dropdown-item" href="/tortasInicio">Tortas</a>
+          <a class="dropdown-item" href="/heladosInicio">Helados</a>
+         
+        </div>-->
+      </li>
+        <li><a href="/nosotrosInicio">Nosotros</a></li>
+        <li><a href="/carrito">Haz tu Pedido</a></li>
+        
+
+        {% if user.is_authenticated %}
+        <li><a href="#">Bienvenido @{{ user.username }}</a></li>
+        <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+        {% endif %}
+      </ul>
+     
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Nosotros</h1>      
+    <p></p>
+
+  </div>
+</div>
+    
+
+
+
+
+<br>
+<br>
+<br>
+
+<div class="card text-center">
+  <div class="card-header">
+   
+  </div>
+  <div class="card-body">
+    <h3 class="card-title" align="center">Sucede millones de veces todas las semanas que un cliente recibe una bebida de un barista de nuestra Cafeteria. Sin embargo, cada interacción es única. </h3>
+    <p class="card-text">Ocurre en tan solo un instante: una mano que salva la distancia de la barra para entregar una taza a otra mano tendida. Pero establece una conexión.
+Nos aseguramos de que todo lo que hacemos esté a la altura de esa conexión: desde nuestro compromiso con el café de máxima calidad del mundo, hasta la manera de interactuar con nuestros clientes y comunidades para operar de forma responsable.Desde nuestros comienzos, en un una tienda hace casi cuarenta años, en todos los lugares donde hemos estado, en todos los lugares con los que nos relacionamos, intentamos que todo sea un poco mejor que cuando llegamos.</p>
+    
+  </div>
+   <ul class="nav nav-tabs card-header-tabs">
+    </ul>
+</div>
+<br>
+<br>
+
+
+<div align="center">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.2635735511167!2d-70.70823348437274!3d-33.598465080731835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d94f6eef1f51%3A0x48e82f1d2eb65ea9!2sDuoc!5e0!3m2!1ses!2scl!4v1603410730238!5m2!1ses!2scl" width="1000" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+
+
+<footer class="page-footer font-small mdb-color darken-3 pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!--Grid row-->
+    <div class="row d-flex justify-content-center">
+
+      <!--Grid column-->
+      <div class="col-md-4">
+
+        <!-- Video -->
+        <div class="embed-responsive embed-responsive-16by9 mb-4">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/B1yJuGQOUaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+      </div>
+      <!--Grid column-->
+      <div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-8 text-left"> 
+      <h1>Arte Latte</h1>
+      <p>El arte latte tiene varios nombres como: arte en café, arte barista o diseños en café, sin embargo el nombre más común es arte latte.
+    Pero ¿qué es? Se trata de dibujar son la leche sobre el café espresso, con 2 técnicas fundamentales: caída libre o etching (grabado).
+    Todo empieza cuando vaporizas o cremas la leche y la viertes sobre el espresso a manera de crear diseños sobre el café. Se puede hacer con chocolate, colorantes, o sólo con la leche.</p>
+      <hr>
+    </div>
+</div>
+    </div>
+    <!--Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="/"> Cafeteria</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+</body>
+</html>

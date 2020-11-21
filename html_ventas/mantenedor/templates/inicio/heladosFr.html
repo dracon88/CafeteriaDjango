@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cafeteria</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+           <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Catalogo Productos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/postresInicio">Postres</a>
+          <a class="dropdown-item" href="/tortasInicio">Tortas</a>
+          <a class="dropdown-item" href="/heladosInicio">Helados</a>
+         
+        </div>
+      </li>
+        <li><a href="/nosotrosInicio">Nosotros</a></li>
+        <li><a href="/carrito">Haz tu Pedido</a></li>
+        <li><a href="/accounts/login">Login</a></li>
+        
+
+        {% if user.is_authenticated %}
+        <li><a href="#">Bienvenido {{ user.username }}</a></li>
+        <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+        {% endif %}
+      </ul>
+    
+    </div>
+  </div>
+</nav>
+
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Helados</h1>      
+    <p></p>
+  </div>
+</div>
+  
+<div class="container-fluid bg-3 text-center">    
+  <h3>Variedad de Helados</h3><br>
+  <div class="row">
+    <div class="col-sm-3">
+      <p>Copa de Helado</p>
+      <img src="https://heladitos.com/wp-content/uploads/2018/01/helado_extravagante.jpg" class="img-responsive" style="width:80%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Paletas de Helados</p>
+      <img src="https://www.hola.com/imagenes/estar-bien/20190809146049/dieta-elegir-entre-helado-bola-polo-cs/0-702-647/AdobeStock_219538362-a.jpg?filter=ds75" class="img-responsive" style="width:80%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Cafe Helado</p>
+      <img src="https://dailysoccerdigest.com/images/kofe_s_morozhenim.jpg" class="img-responsive" style="width:80%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Conos de Helados</p>
+      <img src="https://ae01.alicdn.com/kf/HTB1norMRFXXXXbOXFXXq6xXFXXXV.jpg?size=31840&height=450&width=600&hash=fbff349d1b374c2f55f1538133ba1f5e" class="img-responsive" style="width:80%" alt="Image">
+    </div>
+  </div>
+</div><br>
+<br>
+<br>
+
+
+<footer class="page-footer font-small mdb-color darken-3 pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!--Grid row-->
+    <div class="row d-flex justify-content-center">
+
+      <!--Grid column-->
+      <div class="col-md-4">
+
+        <!-- Video -->
+        <div class="embed-responsive embed-responsive-16by9 mb-4">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/B1yJuGQOUaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+      </div>
+      <!--Grid column-->
+      <div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-8 text-left"> 
+      <h1>Arte Latte</h1>
+      <p>El arte latte tiene varios nombres como: arte en café, arte barista o diseños en café, sin embargo el nombre más común es arte latte.
+    Pero ¿qué es? Se trata de dibujar son la leche sobre el café espresso, con 2 técnicas fundamentales: caída libre o etching (grabado).
+    Todo empieza cuando vaporizas o cremas la leche y la viertes sobre el espresso a manera de crear diseños sobre el café. Se puede hacer con chocolate, colorantes, o sólo con la leche.</p>
+      <hr>
+    </div>
+</div>
+    </div>
+    <!--Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="/"> Cafeteria</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+</body>
+</html>

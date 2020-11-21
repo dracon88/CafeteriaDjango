@@ -1,0 +1,96 @@
+{% extends 'mantenedor/index.html' %}
+{% load static %}
+{% block content %}
+    {# Cargamos la librería #}
+    {% load bootstrap4 %}
+ 
+   
+  
+
+	{# Widget Tweaks #}
+    {% load widget_tweaks %}
+
+  
+    <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box">
+        <div class="box-header">
+
+			<head>
+                 
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+				
+				<style>
+				  /* Remove the jumbotron's default bottom margin */ 
+				   .jumbotron {
+					margin-bottom: 0;
+				  }
+				
+				</style>
+			  </head>
+			  <body>
+			  
+			  <div class="jumbotron" style="background-color: #272c2f;">
+				<div class="container text-center">
+				  <h1 style="color:rgb(255, 255, 255);">Crear Postres</h1>     
+				</div>
+			  </div>
+				<br>
+
+              <div class="table-responsive">
+
+                <nav aria-label="breadcrumb mb-3">
+        					<ol class="breadcrumb">
+        					    <li class="breadcrumb-item"><a href="./">Postres</a></li>
+        					    <li class="breadcrumb-item active">Crear Postres</li>
+        					</ol>
+        				</nav>
+
+                <div class="formulario" align="left">
+
+                	<h4>Crear</h4>
+
+        					<form method="post" enctype="multipart/form-data">
+        					{% csrf_token %}
+        						<!-- {{ form.as_p }} -->
+        						<div class="form-group">
+        						    <label for="nombre" class="txt_negrita">Nombre</label>
+        						    {{ form.nombre|add_class:"form-control" }}
+        						</div>
+        						<div class="form-group">
+        						    <label for="precio" class="txt_negrita">Precio</label>
+        						    {{ form.precio|add_class:"form-control" }}
+        						</div>
+        						<div class="form-group">
+        						    <label for="stock" class="txt_negrita">Stock</label>
+        						    {{ form.stock|add_class:"form-control" }}
+        						</div>
+        						<div class="form-group">
+        						    <label for="img" class="txt_negrita">Imagen</label>
+        						    {{ form.img|add_class:"form-control mb-3" }}
+        						</div>
+        						<button type="submit" class="btn btn-primary">Aceptar</button>
+                    <a href="./" type="submit" class="btn btn-primary">Cancelar</a>
+        					</form>
+
+                </div>
+                
+                     
+
+          <hr>
+        </div>
+ 
+      </div>
+    </div>
+  </div>
+  </section> 
+  {% endblock %}
+   
+
+     
+    
+ 

@@ -1,0 +1,116 @@
+{% extends 'mantenedor/index.html' %}
+{% load static %}
+{% block content %}
+{# Cargamos la librería #}
+{% load bootstrap4 %}
+
+
+
+
+{# Widget Tweaks #}
+{% load widget_tweaks %}
+
+
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+
+          <head>
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+            <style>
+              /* Remove the jumbotron's default bottom margin */
+              .jumbotron {
+                margin-bottom: 0;
+              }
+            </style>
+          </head>
+
+            <div class="jumbotron" style="background-color: #272c2f;">
+              <div class="container text-center">
+                <h1 style="color:rgb(255, 255, 255);">Region</h1>
+              </div>
+            </div>
+            <br>
+          
+        <div class="container text-center mt-5">
+          <div class="row">
+            <div class="col-md-12">
+              <h5>Region</h5>              
+            </div>
+          </div>
+            <div class="col-md-10">
+              <div class="table-responsive">
+                {% if messages %}
+                <ul class="messages btn-group list-group mb-3">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }} list-group-item list-group-item-primary"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                <div align="left" class="btn_crear mb-3">
+                  <a href="/region/crear" type="button" class="btn btn-primary">Crear</a>
+                </div>
+
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th width="35%">codigo</th>
+                      <th>Descripcion</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for region in object_list %}
+                    <tr>
+                      <td>{{ region.cod_region }}</td>
+                      <td>{{ region.nombre }}</td>
+                      
+                      <td>
+                        
+                        <form method="POST" action="/region/eliminar/{{region.cod_region}}">                      
+                          {% csrf_token %}                         
+                          <div class="btn-group">
+                            <a href="/region/detalle/{{region.cod_region}}" title="Ver" type="button" class="btn btn-success">Ver</a>
+                            <a href="/region/editar/{{region.cod_region}}" title="Editar" type="button" class="btn btn-primary">Editar</a>
+                            <button class="btn btn-danger" onclick="return eliminar();" type="submit">
+                              Borrar
+                              
+                            </button>
+                            <!-- falta elimnar    --> 
+                            <!-- <a href="eliminar/{{postre.id}}" title="Eliminar"><i class="fas fa-trash"></i> </a> -->                          
+                          </div>
+                        </form>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>          
+          <hr>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+</section> 
+
+<script type="text/javascript">
+  function eliminar() {
+    var x = confirm("Eliminar Producto ?");
+    if (x)
+      return true;
+    else
+      return false;
+  }
+</script>
+
+{% endblock %}

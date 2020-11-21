@@ -1,0 +1,28 @@
+/* =======================================
+
+		Main Stylesheet
+		
+		Building on Twitter Bootstrap
+		http://twitter.github.com/bootstrap/
+		
+========================================== */
+
+@import url('assets/css/bootstrap.min.css');
+@import url('assets/css/bootstrap-responsive.min.css');
+
+/* New styles below */
+
+		label.valid {
+		  width: 24px;
+		  height: 24px;
+		  background: url(/FrWork/css/img/valid.png) center center no-repeat;
+		  display: inline-block;
+		  text-indent: -9999px;
+		}
+		label.error {
+#//		    background: url(/FrWork/css/img/error.png) center center no-repeat;
+			font-weight: bold;
+			color: red;
+			padding: 2px 8px;
+			margin-top: 2px;
+		}

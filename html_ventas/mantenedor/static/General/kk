@@ -1,0 +1,88 @@
+https://tutorial.djangogirls.org/es/
+
+https://asistenciaclases.duoc.cl/docentes/iniciarClase/2019083019010032624738
+https://asistenciaclases.duoc.cl/docentes/saveAsistenciaAlumnos/2019083019010032624738
+	Respuesta
+Inicio asistenciaclases
+*********************
+POST /docentes/iniciarClase/2019083019010032624738 HTTP/1.1
+Host: asistenciaclases.duoc.cl
+Connection: keep-alive
+Content-Length: 0
+Accept: application/json, text/javascript, */*; q=0.01
+Origin: https://asistenciaclases.duoc.cl
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Referer: https://asistenciaclases.duoc.cl/docentes/registrarNuevaClase/32624738
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,en;q=0.9
+Cookie: _ga=GA1.2.1514721238.1553438451; _fbp=fb.1.1553438451818.1708806486; _gcl_au=1.1.1699786240.1562046537; __utma=17050796.1514721238.1553438451.1562629365.1562629365.1; __utmz=17050796.1562629365.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); BIGipServerpool_web_cakeback_prd_80=3479439882.20480.0000; duoc-fe-id=3445885450.20480.0000; CAKEPHP=00r78a3t30umck4f46k4f6juu0
+
+
+
+
+registrarNuevaClase
+******************
+POST /docentes/saveAsistenciaAlumnos/2019083019010032624738 HTTP/1.1
+Host: asistenciaclases.duoc.cl
+Connection: keep-alive
+Content-Length: 2297
+Accept: application/json, text/javascript, */*; q=0.01
+Origin: https://asistenciaclases.duoc.cl
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36
+Sec-Fetch-Mode: cors
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Sec-Fetch-Site: same-origin
+Referer: https://asistenciaclases.duoc.cl/docentes/registrarNuevaClase/32624738
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,en;q=0.9
+Cookie: _ga=GA1.2.1514721238.1553438451; _fbp=fb.1.1553438451818.1708806486; _gcl_au=1.1.1699786240.1562046537; __utma=17050796.1514721238.1553438451.1562629365.1562629365.1; __utmz=17050796.1562629365.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); BIGipServerpool_web_cakeback_prd_80=3479439882.20480.0000; duoc-fe-id=3445885450.20480.0000; CAKEPHP=n82pim26sq2ipdienllebj6901
+data[Asistencia][565739][presente]: 1
+data[Asistencia][565739][observacion]:
+data[Asistencia][564337][presente]: 1
+data[Asistencia][564337][observacion]:
+data[Asistencia][565161][presente]: 1
+data[Asistencia][565161][observacion]:
+data[Asistencia][493558][presente]: 1
+data[Asistencia][493558][observacion]:
+data[Asistencia][565024][presente]: 0
+data[Asistencia][565024][observacion]:
+data[Asistencia][519051][presente]: 1
+data[Asistencia][519051][observacion]:
+data[Asistencia][35968][presente]: 1
+data[Asistencia][35968][observacion]:
+data[Asistencia][509286][presente]: 1
+data[Asistencia][509286][observacion]:
+data[Asistencia][557538][presente]: 1
+data[Asistencia][557538][observacion]:
+data[Asistencia][565284][presente]: 1
+data[Asistencia][565284][observacion]:
+data[Asistencia][522397][presente]: 1
+data[Asistencia][522397][observacion]:
+data[Asistencia][516691][presente]: 1
+data[Asistencia][516691][observacion]:
+data[Asistencia][496830][presente]: 1
+data[Asistencia][496830][observacion]:
+data[Asistencia][560601][presente]: 1
+data[Asistencia][560601][observacion]:
+data[Asistencia][567542][presente]: 1
+data[Asistencia][567542][observacion]:
+data[Asistencia][566040][presente]: 1
+data[Asistencia][566040][observacion]:
+data[Asistencia][492148][presente]: 1
+data[Asistencia][492148][observacion]:
+data[Asistencia][521463][presente]: 1
+data[Asistencia][521463][observacion]:
+data[Asistencia][564102][presente]: 1
+data[Asistencia][564102][observacion]:
+data[Asistencia][565470][presente]: 1
+data[Asistencia][565470][observacion]:
+data[Asistencia][521235][presente]: 1
+data[Asistencia][521235][observacion]:
+data[Asistencia][504548][presente]: 1
+data[Asistencia][504548][observacion]:
+data[Asistencia][522398][presente]: 1
+data[Asistencia][522398][observacion]:

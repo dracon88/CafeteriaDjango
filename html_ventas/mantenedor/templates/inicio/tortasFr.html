@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cafeteria</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+           <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Catalogo Productos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/postresInicio">Postres</a>
+          <a class="dropdown-item" href="/tortasInicio">Tortas</a>
+          <a class="dropdown-item" href="/heladosInicio">Helados</a>
+         
+        </div>
+      </li>
+        <li><a href="/nosotrosInicio">Nosotros</a></li>
+        <li><a href="/carrito">Haz tu Pedido</a></li>
+        <li><a href="/accounts/login">Login</a></li>
+        
+
+        {% if user.is_authenticated %}
+        <li><a href="#">Bienvenido @{{ user.username }}</a></li>
+        <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+        {% endif %}
+      </ul>
+      <!-- Login
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>-->
+    </div>
+  </div>
+</nav>
+
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Tortas</h1>      
+    <p></p>
+  </div>
+</div>
+  
+<div class="container-fluid bg-3 text-center">    
+  <h3>Variedad de Tortas</h3><br>
+  <div class="row">
+    <div class="col-sm-3">
+      <p>Torta Sacher</p>
+      <img src="https://cdn.tasteatlas.com/images/dishrestaurants/0b3a3202aab54219a0e6e41b0cbec807.jpg?w=600&h=450" class="img-responsive" style="width:80%" alt="Image">
+    </div>
+   <div class="col-sm-3">
+      <p>Torta Zanahoria</p>
+      <img src="https://i.pinimg.com/originals/3c/48/68/3c48686625fbb705c99f4e7922262e9a.jpg" class="img-responsive" style="width:80%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Torta Yogurt</p>
+      <img src="https://t2.rg.ltmcdn.com/es/images/8/6/5/img_tarta_de_fresa_y_yogur_con_thermomix_30568_600.jpg" class="img-responsive" style="width:80%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Torta de Cheesecake</p>
+      <img src="https://i.pinimg.com/736x/b0/02/f2/b002f250663b604d8d29897af963f535.jpg" class="img-responsive" style="width:80%" alt="Image">
+    </div>
+  </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+     <div class="col-sm-3"> 
+      <p>Tota de Panqueques</p>
+      <img src="https://pequenutricion.com/wp-content/uploads/2015/09/pastel-panqueques.jpg" class="img-responsive" style="width:80%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Tota de Chocolate (Vegana)</p>
+      <img src="https://recetassaludables.eu/wp-content/uploads/2019/02/chocolate-1-600x450.jpeg" class="img-responsive" style="width:80%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Torta 3 Leches</p>
+      <img src="https://treslechescake.net/wp-content/uploads/2017/11/9.-postre-de-tres-leches-frio.jpg" class="img-responsive" style="width:80%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Torta de Frutos Rojos</p>
+      <img src="https://lovecooking.neff.es/wp-content/uploads//2018/03/Pastel-de-frambuesas-600x450.jpg" class="img-responsive" style="width:80%" alt="Image">
+    </div>
+  </div>
+</div><br><br>
+
+<footer class="page-footer font-small mdb-color darken-3 pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!--Grid row-->
+    <div class="row d-flex justify-content-center">
+
+      <!--Grid column-->
+      <div class="col-md-4">
+
+        <!-- Video -->
+        <div class="embed-responsive embed-responsive-16by9 mb-4">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/B1yJuGQOUaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+      </div>
+      <!--Grid column-->
+      <div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-8 text-left"> 
+      <h1>Arte Latte</h1>
+      <p>El arte latte tiene varios nombres como: arte en café, arte barista o diseños en café, sin embargo el nombre más común es arte latte.
+    Pero ¿qué es? Se trata de dibujar son la leche sobre el café espresso, con 2 técnicas fundamentales: caída libre o etching (grabado).
+    Todo empieza cuando vaporizas o cremas la leche y la viertes sobre el espresso a manera de crear diseños sobre el café. Se puede hacer con chocolate, colorantes, o sólo con la leche.</p>
+      <hr>
+    </div>
+</div>
+    </div>
+    <!--Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="/"> Cafeteria</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+</body>
+</html>

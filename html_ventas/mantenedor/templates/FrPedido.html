@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ {% load static %}
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css'%}" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <!--BARRA DE NAVEGACION-->
+  <nav>
+    <div class="nav-wrapper brown">
+      <a href="inicio" class="brand-logo">Coffee Time</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="usuario">Registro Cliente</a></li>
+        <li><a href="pedido">Pedido</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="FrCliente.html">Cliente</a></li>
+    <li><a href="FrPedido.html">Pedido</a></li>
+  </ul>
+
+
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating red"><i class="material-icons">feedback</i></a></li>
+            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+    </div>
+
+
+    <div class="container section">
+        <div class="row">
+
+            <div class="col s4">
+                <div class="card">
+
+                    <div class="card-image">
+                        <img src="{% static 'imagenes/tipocafe.jpg'%}" alt="">
+                    </div>
+
+                    <div class="card-content">
+                        <p>Menú de Cafes</p>
+                    </div>
+
+                    <div class="card-action">
+
+
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>Elige tu opción</option>
+                                <option value="1">Expresso</option>
+                                <option value="2">tradicional</option>
+                                <option value="3">Capuchino</option>
+                                <option value="4">Capuchino Vainilla</option>
+                                <option value="5">Latte</option>
+                                <option value="6">Mokaccino</option>
+                                <option value="7">Americano</option>
+                            </select>
+                            <label>Tipos de Café</label>
+                        </div>
+                        <a onclick="M.toast({html: 'Agregado'})" class="btn brown darken-1">Agregado</a>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="col s4">
+                <div class="card">
+
+                    <div class="card-image">
+                        <img src="{% static 'imagenes/tipoCafe2.jpg'%}" alt="">
+                    </div>
+
+                    <div class="card-content">
+                        <p>Tamaño Café</p>
+                    </div>
+
+                    <div class="card-action">
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>Elige una opción</option>
+                                <option value="1">Pequeño</option>
+                                <option value="2">Mediano</option>
+                                <option value="3">Grande</option>
+                            </select>
+                            <label>Tamaño Café</label>
+                        </div>
+                        <a onclick="M.toast({html: 'Agregado'})" class="btn brown darken-1">Agregado</a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col s4">
+                <div class="card">
+
+                    <div class="card-image">
+                        <img src="{% static 'imagenes/tipoCafe4.jpg'%}" alt="">
+                    </div>
+
+                    <div class="card-content">
+                        <p>Agregados</p>
+                    </div>
+
+                    <div class="card-action">
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>Elige una opción</option>
+                                <option value="1">Brownie</option>
+                                <option value="2">Muffin</option>
+                                <option value="3">Trozo Torta</option>
+                            </select>
+                            <label>Agregados</label>
+                        </div>
+                        <a onclick="M.toast({html: 'Agregado'})" class="btn brown darken-1">Agregado</a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+         <table class="highlight centered">
+            <thead>
+              <tr>
+                  <th>Tipo Café</th>
+                  <th>Tamaño Café</th>
+                  <th>Agregados</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+              <tr>
+                <td>Americano</td>
+                <td>Grande</td>
+                <td>brownie</td>
+              </tr>
+              <tr>
+                <td>Latte</td>
+                <td>Mediano</td>
+                <td>Muffin</td>
+              </tr>
+              <tr>
+                <td>Capuchino</td>
+                <td>Mediano</td>
+                <td>Torta</td>
+              </tr>
+              
+            </tbody>
+            
+
+            <a class="btn right red" onclick="M.toast({html: 'Ir a pagina de Pago', completeCallback: function()
+            {alert('Gracias por comprar con nosotros ahora tu pago');
+            window.location='https://form.jotform.com/202671193548863'
+            }})">Pago</a>
+    
+    
+           </table>
+    </div>
+   
+            
+
+
+
+
+
+
+
+
+
+    <footer class="page-footer brown lighten-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Coffe Time</h5>
+                    <p class="grey-text text-lighten-4">Es un local chiquito que existe hace seis años, algo escondido,
+                        pero con una linda terraza
+                        y —lo mejor de todo— buen café de especialidad y pasteles deliciosos,
+                        incluidas opciones para veganos.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Pimpinelas
+                <a class="grey-text text-lighten-4 right" href="#!">Más Links</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="{% static 'js/materialize.min.js'%}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.parallax');
+            var instances = M.Parallax.init(elems);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems);
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.dropdown-trigger');
+            var instances = M.Dropdown.init(elems);
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+          });
+
+    </script>
+
+</body>
+
+</html>

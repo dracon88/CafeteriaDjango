@@ -1,0 +1,75 @@
+
+      {% extends 'mantenedor/index.html' %}
+      {% load static %}
+      {% block content %}
+  
+          <section class="content">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="box">
+                <div class="box-header">
+
+        
+          
+            
+             <div class="table-responsive">
+              <head>
+                 
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                
+                <style>
+                  /* Remove the jumbotron's default bottom margin */ 
+                   .jumbotron {
+                    margin-bottom: 0;
+                  }
+                
+                </style>
+              </head>
+              <body>
+              
+              <div class="jumbotron" style="background-color: #272c2f;">
+                <div class="container text-center">
+                  <h1 style="color:rgb(255, 255, 255);">Detalles de Postres</h1>     
+                </div>
+              </div>
+                <br>
+                <nav aria-label="breadcrumb mb-3">
+        					<ol class="breadcrumb">
+        					    <li class="breadcrumb-item"><a href="../">Postres</a></li>
+        					    <li class="breadcrumb-item active">Detalles Potres</li>
+        					</ol>
+        				</nav>
+
+                <div class="formulario" align="left">
+
+                	<h4>Detalles</h4>
+
+        					<p><span class="txt_negrita">Nombre:</span> <br> {{object.nombre}}</p>
+        					<p><span class="txt_negrita">Precio:</span> <br> {{object.precio}}</p>
+        					<p><span class="txt_negrita">Stock:</span> <br> {{object.stock}}</p>
+        					<p><span class="txt_negrita">Imagen:</span> <br> <img src="{% static 'imagenes/'%}{{object.img}}" alt="{{object.nombre}}" class="img-fluid"> </p>
+        					<p><span class="txt_negrita">Creado:</span> <br> {{object.created_at}}</p>
+        					<p><span class="txt_negrita">Actualizado:</span> <br> {{object.updated_at}}</p>
+
+                  <a href="../" type="submit" class="btn btn-primary">Volver</a>
+
+                </div>
+              </div>
+            
+                    
+          <hr>    
+       
+      </div>
+    </div>
+  </div>
+</div>
+</section> 
+
+{% endblock %}
+
+    
+    
+

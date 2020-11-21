@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cafeteria</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Tipo de fuente -->
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <!-- Bootstrap Grid -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap-grid.css' %}">
+  <!-- Estilos CSS de personalización -->
+  <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Pedido</a>
+    <a href="/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Home</a>
+    
+  </nav>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9">
+        <!-- Titulo de tienda -->
+        <h2>Pedidos Delivery</h2>
+      </div>
+      <div class="col-sm-3">
+        <!-- Carrito de compras y sus items -->
+        <div class='carrito'>
+          
+          <p class="carrito-total">
+            <span class="simpleCart_quantity">0</span> Producto(s) <span class="simpleCart_total">$0.00</span>
+          </p>
+
+          <div class="bolsa">
+            <div class="simpleCart_items"></div>
+            <div class="opciones">
+              <a class="boton simpleCart_empty" href="javascript:void(0)">Vaciar carrito</a>
+              <a class="boton simpleCart_checkout" href="#">Pago</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <!--  Contenedor con el nombre principal (simpleCart_shelfItem)
+        todos los items de un loop lo deben de tener -->
+      <div class="col-md-6 col-lg-3 simpleCart_shelfItem">
+        <!-- Nombre del producto se obtiene al agregar la clase (item_name) -->
+        <h2 class="item_name">2x Latte + Muffin</h2>
+        <!-- Imagen del producto se obtiene al agregar la clase (item_image) -->
+        <img class="item_image" src="{% static 'imagenes/latte-muffin.jpg' %}" alt="Latte Muffin"/>
+        <!-- Cantidad a requerir del producto se obtiene al agregar la clase (item_Quantity) -->
+        <input class="item_Quantity" type="number" min="1" max="10" value="1"/>
+        <!-- Precio del producto se obtiene al agregar la clase (item_price) -->
+        <div class="item_price">$5800</div>
+        <!-- Añadir el producto al carrito, se logra agregando la clase (item_add) -->
+        <a class="item_add" href="javascript:;"> Añadir al carrito </a>
+
+      </div>
+
+      <div class="col-md-6 col-lg-3 simpleCart_shelfItem">
+        <h2 class="item_name">Latte Vainilla + Cake</h2>
+
+        <img class="item_image" src="{% static 'imagenes/latte-vainilla-limon-cake.jpg' %}" alt="Latte Vainilla"/>
+        <input class="item_Quantity" type="number" min="1" max="10" value="1"/>
+        <div class="item_price">$5800</div>
+        <a class="item_add" href="javascript:;"> Añadir al carrito </a>
+
+      </div>
+      <div class="col-md-6 col-lg-3 simpleCart_shelfItem">
+
+        <h2 class="item_name">Palta Ave</h2>
+        <img class="item_image" src="{% static 'imagenes/palta-ave.png' %}" alt="Latte"/>
+        <input class="item_Quantity" type="number" min="1" max="10" value="1"/>
+        <div class="item_price">$4400</div>
+        <a class="item_add" href="javascript:;"> Añadir al carrito </a>
+
+      </div>
+      <div class="col-md-6 col-lg-3 simpleCart_shelfItem">
+
+        <h2 class="item_name">Panini Jamon</h2>
+        <img class="item_image" src="{% static 'imagenes/panini-jamon-serrano.jpg' %}" alt="Triple Latte"/>
+        <input class="item_Quantity" type="number" min="1" max="10" value="1"/>
+        <div class="item_price">$4400</div>
+        <a class="item_add" href="javascript:;"> Añadir al carrito </a>
+
+      </div>
+      <div class="col-md-6 col-lg-3 simpleCart_shelfItem">
+
+        <h2 class="item_name">Latte Macchiato</h2>
+        <img class="item_image" src="{% static 'imagenes/latte-macchiato.jpg' %}" alt="Latte Macchiato"/>
+        <input class="item_Quantity" type="number" min="1" max="10" value="1"/>
+        <div class="item_price">$3800</div>
+        <a class="item_add" href="javascript:;"> Añadir al carrito </a>
+
+      </div>
+      <div class="col-md-6 col-lg-3 simpleCart_shelfItem">
+
+        <h2 class="item_name">Mocha</h2>
+        <img class="item_image" src="{% static 'imagenes/mocha.jpg' %}" alt="Mocha"/>
+        <input class="item_Quantity" type="number" min="1" max="10" value="1"/>
+        <div class="item_price">$4300</div>
+        <a class="item_add" href="javascript:;"> Añadir al carrito </a>
+
+      </div>
+      <div class="col-md-6 col-lg-3 simpleCart_shelfItem">
+
+        <h2 class="item_name">Cappuccino</h2>
+        <img class="item_image" src="{% static 'imagenes/cappuccino.jpg' %}" alt="Capuccino"/>
+        <input class="item_Quantity" type="number" min="1" max="10" value="1"/>
+        <div class="item_price">$3600</div>
+        <a class="item_add" href="javascript:;"> Añadir al carrito </a>
+
+      </div>
+      <div class="col-md-6 col-lg-3 simpleCart_shelfItem">
+
+        <h2 class="item_name">Americano</h2>
+        <img class="item_image" src="{% static 'imagenes/americano.jpg' %}" alt="Americano"/>
+        <input class="item_Quantity" type="number" min="1" max="10" value="1"/>
+        <div class="item_price">$3100</div>
+        <a class="item_add" href="javascript:;"> Añadir al carrito </a>
+
+      </div>
+   
+
+
+
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+
+  <footer class="container">
+  
+  </footer>
+  <!-- Agregamos la librería jQuery (Importante)-->
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <!-- Agregamos la librería Simple Cart -->
+  <script src="{% static 'js/simpleCart.min.js' %}"></script>
+  <!-- Código JS de inicialización  -->
+  <script src="{% static 'js/app.js' %}"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</body>
+</html>

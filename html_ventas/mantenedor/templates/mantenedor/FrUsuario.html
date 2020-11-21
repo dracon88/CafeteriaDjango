@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css'%}" media="screen,projection" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  
+ <!--BARRA DE NAVEGACION-->
+  <nav>
+    <div class="nav-wrapper brown">
+      <a href="inicio" class="brand-logo">Coffee Time</a>
+      <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+       <li><a href="/usuario">Registrar Usuario</a></li>
+        <li><a href="/pedido">Pedido</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+  <li><a href="/cliente">Cliente</a></li>
+    <li><a href="/pedido">Pedido</a></li>
+  </ul>
+
+  <!--Parallax-->
+  <div class="parallax-container">
+    <div class="parallax"><img src="{% static 'imagenes/1.jpg'%}"></div>
+  </div>
+
+<h3>Registro de Usuario</h3>
+  <div class="row">
+    <form class="col s12" method="POST" action="{% url 'usuario' %}">
+    {% csrf_token %}
+
+      <div class="row">
+        <div class="input-field col s6">
+            <input id="nombre" type="text" class="validate" name="nombre">
+            <label for="nombre">Nombre</label>
+          </div>
+
+        <div class="input-field col s6">
+          <input id="apellidoP" type="text" class="validate" name="papellido">
+          <label for="apellidoP">Apellido Paterno</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="apellidoM" type="text" class="validate" name="sapellido">
+          <label for="apellidoM">Apellido Materno</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="NumContacto" type="text" class="validate" name="contacto">
+          <label for="NumContacto">Numero de Contacto</label>
+        </div>
+        
+     
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate" name="contrasena">
+          <label for="password">Conraseña</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" name="email">
+          <label for="email">Email</label>
+        </div>
+      </div>
+
+
+     <a onclick="M.toast({html: 'Registrado'})" class="btn">Registrar</a>
+    </form>
+  </div>
+
+
+
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="{% static 'imagenes/3.jpg'%}"></div>
+  </div>
+
+
+
+
+
+  <footer class="page-footer brown lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Coffe Time</h5>
+          <p class="grey-text text-lighten-4">Es un local chiquito que existe hace seis años, algo escondido, pero con
+            una linda terraza
+            y —lo mejor de todo— buen café de especialidad y pasteles deliciosos,
+            incluidas opciones para veganos.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2020 Pimpinelas
+        <a class="grey-text text-lighten-4 right" href="#!">Más Links</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="{% static 'js/materialize.min.js'%}"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.parallax');
+      var instances = M.Parallax.init(elems);
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.fixed-action-btn');
+      var instances = M.FloatingActionButton.init(elems);
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+    });
+  </script>
+
+</body>
+
+</html>

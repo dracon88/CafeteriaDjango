@@ -1,0 +1,3 @@
+http://docs.ckeditor.com/#!/guide/dev_toolbar
+http://knopok.net/text-to-html.html
+http://nakupanda.github.io/bootstrap3-dialog/
